@@ -1,10 +1,11 @@
 import React from "react"
-import Header from "./components/header"
+import Header from "./Header"
+import Layout from "./Layout"
 
 export default () => (
-  <div>
+  <Layout>
     <Header headerText="About Gatsby" />
     <Header headerText="It's pretty cool" />
     <p>Such wow. Very React.</p>
-  </div>
+  </Layout>
 )

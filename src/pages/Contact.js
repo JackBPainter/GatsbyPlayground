@@ -1,12 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
-import Header from "./components/Header"
-import Container from "./components/Container"
+import Header from "./Header"
+import Layout from "./Layout"
 
 export default () => (
-  <Container>
-    <Link to="/">Home</Link>
+  <Layout>
     <Header headerText="Call me maybe!" />
     <p>Send us a message!</p>
-  </Container>
+  </Layout>
 )
