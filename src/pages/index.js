@@ -1,6 +1,6 @@
 import React from "react"
-import Header from "./Header"
-import Layout from "./Layout"
+import Header from "./components/Header"
+import Layout from "./components/Layout"
 
 export default () => (
   <Layout>
