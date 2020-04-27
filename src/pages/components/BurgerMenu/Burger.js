@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { bool, func } from 'prop-types'
 
 const StyledBurger = styled.button`
   position: absolute;
@@ -32,7 +33,7 @@ const StyledBurger = styled.button`
 
 const Burger = ({ open, setOpen }) => {
   return (
-    <StyledBurger open={open} onClick{() => setOpen(!open)}>
+    <StyledBurger open={open} onClick={() => setOpen(!open)}>
       <div />
       <div />
       <div />
