@@ -1,10 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
+
+const StyledList = styled.li`
+    display: 'inline-block';
+    margin-right: '1rem';
+`
 
 const ListLink = props => (
-    <li style={{ display: 'inline-block', marginRight: '1rem' }}>
+    <StyledList>
         <Link to={props.to}>{props.children}</Link>
-    </li>
+    </StyledList>
 )
 
 export default ListLink

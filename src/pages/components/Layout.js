@@ -1,21 +1,46 @@
-import React from "react"
-import { Link } from "gatsby"
-import ListLink from "./ListLink"
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
+
+import ListLink from './ListLink'
+
+const StyledDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+`
+
+const StyledH2 = styled.h2`
+  margin: 2rem 0;
+`
+
+const StyledH3 = styled.h3`
+  text-shadow: none;
+  background: none; 
+`
+
+const StyledUL = styled.ul`
+  margin: 0 auto;
+  margin-bottom: 2rem;
+`
+
 
 const Layout = ({ children }) => (
-  <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
-    <h2 style={{ margin: '2rem 0'}}>
-      <Link to="/" style={{ textShadow: "none", background: "none" }}>
-        <h3>Gatsby Playground</h3>
+  <StyledDiv>
+    <StyledH2>
+      <Link to="/">
+        <StyledH3>Gatsby Playground</StyledH3>
       </Link>
-      <ul style={{ margin: '0 auto', marginBottom: '2rem' }}>
+      <StyledUL>
         <ListLink to="/">Home</ListLink>
         <ListLink to="/About">About</ListLink>
         <ListLink to="Contact">Contact</ListLink>
-      </ul>
-    </h2>
+      </StyledUL>
+    </StyledH2>
     {children}
-  </div>
+  </StyledDiv>
 )
 
 export default Layout
