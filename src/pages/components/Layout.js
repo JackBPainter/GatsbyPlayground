@@ -1,15 +1,23 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
+import React from "react"
+import { Link } from "gatsby"
+import styled from "styled-components"
 
-import ListLink from './ListLink'
+import ListLink from "./ListLink"
 
 const StyledDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 3rem;
+`
+
+const StyledMain = styled.main`
+  /* background: lightblue; */
+  width: 600px;
+  height: 100vh;
+  max-width: 600px;
+  position: absolute;
+  z-index: -1;
 `
 
 const StyledH2 = styled.h2`
@@ -18,7 +26,7 @@ const StyledH2 = styled.h2`
 
 const StyledH3 = styled.h3`
   text-shadow: none;
-  background: none; 
+  background: none;
 `
 
 const StyledUL = styled.ul`
@@ -26,9 +34,9 @@ const StyledUL = styled.ul`
   margin-bottom: 2rem;
 `
 
-
 const Layout = ({ children }) => (
   <StyledDiv>
+    <StyledMain />
     <StyledH2>
       <Link to="/">
         <StyledH3>Gatsby Playground</StyledH3>

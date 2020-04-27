@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledHeader = styled.h1`
-    margin: 1rem 0;
+    margin: 0.5rem;
 `
 
 const Header = props => (
