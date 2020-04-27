@@ -1,5 +1,6 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
+import { bool } from 'prop-types'
 
 const StyledMenu = styled.nav`
   display: flex;
@@ -40,9 +41,9 @@ const StyledMenu = styled.nav`
   }
 `
 
-const Menu = () => {
+const Menu = ({ open }) => {
   return (
-    <StyledMenu>
+    <StyledMenu open={open}> 
       <a href="/">
         <span role="img" aria-label="about us">
           &#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;
@@ -63,6 +64,10 @@ const Menu = () => {
       </a>
     </StyledMenu>
   )
+}
+
+Menu.propTypes = {
+    open: bool.isRequired
 }
 
 export default Menu
