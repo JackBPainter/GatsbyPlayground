@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
 `
 
 const StyledMain = styled.main`
-  /* background: lightblue; */
+  background: white;
   width: 600px;
   height: 100vh;
   max-width: 600px;
