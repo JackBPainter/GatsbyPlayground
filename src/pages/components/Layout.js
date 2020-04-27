@@ -1,8 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
-import ListLink from "./ListLink"
+import ListLink from './ListLink'
+import Burger from './BurgerMenu/Burger'
 
 const StyledDiv = styled.div`
   display: flex;
@@ -36,6 +37,7 @@ const StyledUL = styled.ul`
 
 const Layout = ({ children }) => (
   <StyledDiv>
+  <Burger />
     <StyledMain />
     <StyledH2>
       <Link to="/">
