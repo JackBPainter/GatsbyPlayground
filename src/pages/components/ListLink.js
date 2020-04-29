@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
+import React from "react"
+import { Link } from "gatsby"
+import styled from "styled-components"
 
 const StyledList = styled.li`
-    display: 'inline-block';
-    margin-right: '1rem';
+    display: "inline-block";
+    margin-right: "1rem";
 `
 
 const ListLink = props => (

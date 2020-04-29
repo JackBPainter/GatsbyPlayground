@@ -1,7 +1,8 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { ThemeProvider } from "styled-components"
-import { theme } from "../styles/theme"
 import { GlobalStyles } from "../styles/global"
+import { theme } from "../styles/theme"
+import { useOnOutsideClick } from "../hooks/hooks"
 
 import Burger from "./components/BurgerMenu/Burger"
 import Menu from "./components/BurgerMenu/Menu"
@@ -9,13 +10,16 @@ import Header from "./components/Header"
 import Layout from "./components/Layout"
 
 const App = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false),
+  node = useRef()
+
+  useOnOutsideClick(node, () => setOpen(false))
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <>
-        <div>
+        <div ref={node}>
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
         </div>
