@@ -5,12 +5,11 @@
  */
 
 module.exports = {
-  siteMetaData: {
+  siteMetadata: {
     title: 'Title from siteMetaData'
   },
   plugins: [
     {	
-      resolve: `gatsby-plugin-typography`, 
       resolve: `gatsby-plugin-styled-components`,
       options: {
         pathToConfigModule: `src/utils/typography`,	        
