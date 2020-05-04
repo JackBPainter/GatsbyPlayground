@@ -27,6 +27,7 @@ const StyledH2 = styled.h2`
 const StyledH3 = styled.h3`
   text-shadow: none;
   background: none;
+  cursor: default;
 `;
 
 const StyledUL = styled.ul`
@@ -34,7 +35,7 @@ const StyledUL = styled.ul`
   margin-bottom: 2rem;
 `;
 
-const Layout = ({ children }) => {
+export default ({ children }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -63,5 +64,3 @@ const Layout = ({ children }) => {
     </StyledDiv>
   );
 };
-
-export default Layout;

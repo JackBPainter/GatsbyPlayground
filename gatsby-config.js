@@ -6,18 +6,16 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Pandas eating lots'
+    title: `Pandas Eating Lots`,
   },
   plugins: [
-    {	
-      resolve: `gatsby-plugin-styled-components`,
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
-      }
-    }
-  ]
+      },
+    },
+    `gatsby-transformer-remark`,
+  ],
 }
