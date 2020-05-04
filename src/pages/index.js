@@ -4,9 +4,11 @@ import { ThemeProvider } from "styled-components"
 import { theme } from "../styles/theme"
 import { GlobalStyles } from "../styles/global"
 
-export default () => (
+const Index = () => (
   <ThemeProvider theme={theme}>
     <GlobalStyles />
     <App />
   </ThemeProvider>
 )
+
+export default Index

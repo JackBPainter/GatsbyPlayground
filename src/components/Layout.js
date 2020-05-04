@@ -35,7 +35,7 @@ const StyledUL = styled.ul`
   margin-bottom: 2rem;
 `;
 
-export default ({ children }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -64,3 +64,5 @@ export default ({ children }) => {
     </StyledDiv>
   );
 };
+
+export default Layout
